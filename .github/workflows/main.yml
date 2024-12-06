@@ -1,0 +1,78 @@
+name: Build and Release
+
+on:
+  push:
+    tags:
+      - 'v*' # Trigger on version tags, e.g., v1.0.0
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        os: [ubuntu-20.04, macos-latest, windows-latest]
+        architecture: [x64, arm64]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js (if applicable)
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: Install dependencies (if applicable)
+        run: npm install
+
+      - name: Build application
+        run: |
+          # Build commands for each platform (e.g., for Linux, macOS, and Windows)
+          if [[ $RUNNER_OS == "Linux" ]]; then
+            echo "Building for Linux"
+            # Run build commands for Linux (e.g., npm run build)
+          fi
+          if [[ $RUNNER_OS == "macOS" ]]; then
+            echo "Building for macOS"
+            # Run build commands for macOS (e.g., npm run build)
+          fi
+          if [[ $RUNNER_OS == "Windows" ]]; then
+            echo "Building for Windows"
+            # Run build commands for Windows (e.g., npm run build)
+          fi
+
+      - name: Create Release Assets
+        run: |
+          # Package your application for each platform (e.g., tarball for Linux, zip for Windows, etc.)
+          if [[ $RUNNER_OS == "Linux" ]]; then
+            tar -czvf flash-usdt-sender-linux-x64.tar.gz build/
+          fi
+          if [[ $RUNNER_OS == "macOS" ]]; then
+            zip -r flash-usdt-sender-macos-x64.zip build/
+          fi
+          if [[ $RUNNER_OS == "Windows" ]]; then
+            zip -r flash-usdt-sender-win-x64.zip build/
+          fi
+
+      - name: Upload Release Assets
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            flash-usdt-sender-linux-x64.tar.gz
+            flash-usdt-sender-macos-x64.zip
+            flash-usdt-sender-win-x64.zip
+
+      - name: Create GitHub Release
+        uses: actions/create-release@v1
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          body: |
+            ## New Release
+            This release includes binaries for multiple platforms including Linux, macOS, and Windows.
+
+            ### Assets:
+            - Linux: [flash-usdt-sender-linux-x64.tar.gz]
+            - macOS: [flash-usdt-sender-macos-x64.zip]
+            - Windows: [flash-usdt-sender-win-x64.zip]
