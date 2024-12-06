@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet Management - Flash USDT Sender</title>
+    <meta name="description" content="Manage your cryptocurrency wallet, view balances, and track recent transactions with our user-friendly wallet interface.">
+    <meta name="keywords" content="blockchain, USDT, cryptocurrency, education, wallet management">
+    <link rel="canonical" href="https://flashusdtsender.com/wallet-management.html">
+    <meta property="og:title" content="Wallet Management - Flash USDT Sender">
+    <meta property="og:description" content="Manage your cryptocurrency wallet, view balances, and track recent transactions with our user-friendly wallet interface.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://flashusdtsender.com/wallet-management.html">
+    <meta property="og:image" content="https://flashusdtsender.com/img/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Wallet Management - Flash USDT Sender">
+    <meta name="twitter:description" content="Manage your cryptocurrency wallet, view balances, and track recent transactions with our user-friendly wallet interface.">
+    <meta name="twitter:image" content="https://flashusdtsender.com/img/twitter-image.jpg">
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/js/main.js" defer></script>
+</head>
+<body class="bg-gray-100 font-sans text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+    <header class="bg-blue-600 text-white shadow-md dark:bg-blue-800">
+        <nav class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="text-xl font-bold">
+                    <a href="/" class="flex items-center">
+                        <img src="/img/logo.svg" alt="Flash USDT Sender Logo" class="h-8 w-8 mr-2">
+                        Flash USDT Sender
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-4">
+                    <a href="/" class="hover:text-blue-200">Home</a>
+                    <a href="/wallet.html" class="hover:text-blue-200">Wallet</a>
+                    <a href="/transactions.html" class="hover:text-blue-200">Transactions</a>
+                    <a href="/education.html" class="hover:text-blue-200">Learn</a>
+                    <a href="/analytics.html" class="hover:text-blue-200">Analytics</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="/" class="block py-2 px-4 text-sm hover:bg-blue-700">Home</a>
+            <a href="/wallet.html" class="block py-2 px-4 text-sm hover:bg-blue-700">Wallet</a>
+            <a href="/transactions.html" class="block py-2 px-4 text-sm hover:bg-blue-700">Transactions</a>
+            <a href="/education.html" class="block py-2 px-4 text-sm hover:bg-blue-700">Learn</a>
+            <a href="/analytics.html" class="block py-2 px-4 text-sm hover:bg-blue-700">Analytics</a>
+        </div>
+    </header>
+    <main class="container mx-auto px-6 py-8">
+        <h1 class="text-3xl font-bold mb-6">Wallet Management</h1>
+        
+                    <div class="bg-white shadow-md rounded-lg p-6 dark:bg-gray-800">
+                        <h2 class="text-2xl font-bold mb-4">Your Wallet</h2>
+                        <div id="wallet-info">
+                            <p>Connect your wallet to get started.</p>
+                        </div>
+                        <button id="connect-wallet" class="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300">Connect Wallet</button>
+                        <div id="wallet-balance" class="mt-4"></div>
+                        <div id="wallet-transactions" class="mt-4">
+                            <h3 class="text-xl font-bold mb-2">Recent Transactions</h3>
+                            <ul id="transaction-list" class="space-y-2"></ul>
+                        </div>
+                    </div>
+                    <script src="/js/wallet.js"></script>
+                
+    </main>
+    <footer class="bg-gray-800 text-white py-4 dark:bg-gray-950">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 Flash USDT Sender - Blockchain Education Platform. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

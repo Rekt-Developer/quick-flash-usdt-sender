@@ -1,0 +1,16 @@
+{
+  "network": "mainnet",
+  "usdtContractAddress": {
+    "mainnet": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+    "testnet": "0x3B00Ef435fA4FcFF5C209a37d1f3dcff37c705aD"
+  },
+  "rpcUrls": {
+    "mainnet": "https://mainnet.infura.io/v3/YOUR-PROJECT-ID",
+    "testnet": "https://goerli.infura.io/v3/YOUR-PROJECT-ID"
+  },
+  "apiEndpoints": {
+    "priceData": "https://api.coingecko.com/api/v3/coins/tether",
+    "gasPrice": "https://ethgasstation.info/api/ethgasAPI.json",
+    "networkStats": "https://api.etherscan.io/api"
+  }
+}
