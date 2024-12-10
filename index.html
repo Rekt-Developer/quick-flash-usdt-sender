@@ -1,95 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Flash USDT Sender - Flash USDT Sender</title>
-    <meta name="description" content="Learn about blockchain technology, USDT transactions, and secure wallet management through our interactive educational platform.">
-    <meta name="keywords" content="blockchain, USDT, cryptocurrency, education, wallet management">
-    <link rel="canonical" href="https://flashusdtsender.com/welcome-to-flash-usdt-sender.html">
-    <meta property="og:title" content="Welcome to Flash USDT Sender - Flash USDT Sender">
-    <meta property="og:description" content="Learn about blockchain technology, USDT transactions, and secure wallet management through our interactive educational platform.">
+    <title>Welcome to Flash USDT Sender - Quick USDT Transactions</title>
+    <meta name="description" content="Quickly send USDT with our secure, fast, and educational platform. Learn blockchain, manage wallets, and track transactions with ease.">
+    <meta name="keywords" content="USDT, cryptocurrency, wallet management, blockchain, send USDT">
+    <link rel="canonical" href="https://quick-flash-usdt-sender.vercel.app/">
+    <meta property="og:title" content="Flash USDT Sender - Secure and Fast Transactions">
+    <meta property="og:description" content="Secure, fast, and educational platform to send USDT and manage your crypto wallet seamlessly.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://flashusdtsender.com/welcome-to-flash-usdt-sender.html">
-    <meta property="og:image" content="https://flashusdtsender.com/img/og-image.jpg">
+    <meta property="og:url" content="https://quick-flash-usdt-sender.vercel.app/">
+    <meta property="og:image" content="https://quick-flash-usdt-sender.vercel.app/img/og-image.jpg">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Welcome to Flash USDT Sender - Flash USDT Sender">
-    <meta name="twitter:description" content="Learn about blockchain technology, USDT transactions, and secure wallet management through our interactive educational platform.">
-    <meta name="twitter:image" content="https://flashusdtsender.com/img/twitter-image.jpg">
+    <meta name="twitter:title" content="Flash USDT Sender - Secure and Fast Transactions">
+    <meta name="twitter:description" content="Learn about blockchain, USDT transactions, and wallet management while sending USDT fast and securely.">
+    <meta name="twitter:image" content="https://quick-flash-usdt-sender.vercel.app/img/twitter-image.jpg">
     <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="/js/main.js" defer></script>
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' https://quick-flash-usdt-sender.vercel.app; connect-src 'self'">
 </head>
+
 <body class="bg-gray-100 font-sans text-gray-900 dark:bg-gray-900 dark:text-gray-100">
-    <header class="bg-blue-600 text-white shadow-md dark:bg-blue-800">
-        <nav class="container mx-auto px-6 py-3">
-            <div class="flex justify-between items-center">
-                <div class="text-xl font-bold">
-                    <a href="/" class="flex items-center">
-                        <img src="/img/logo.svg" alt="Flash USDT Sender Logo" class="h-8 w-8 mr-2">
-                        Flash USDT Sender
-                    </a>
-                </div>
-                <div class="hidden md:flex space-x-4">
-                    <a href="/" class="hover:text-blue-200">Home</a>
-                    <a href="/wallet.html" class="hover:text-blue-200">Wallet</a>
-                    <a href="/transactions.html" class="hover:text-blue-200">Transactions</a>
-                    <a href="/education.html" class="hover:text-blue-200">Learn</a>
-                    <a href="/analytics.html" class="hover:text-blue-200">Analytics</a>
-                </div>
-                <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-white focus:outline-none">
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                        </svg>
-                    </button>
-                </div>
+    <header class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white shadow-lg dark:from-blue-800 dark:to-indigo-900">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-xl font-bold flex items-center">
+                <img src="/img/logo.svg" alt="Flash USDT Sender Logo" class="h-10 w-10 mr-3">
+                <a href="/" class="text-white hover:text-gray-200">Flash USDT Sender</a>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="/" class="text-white hover:text-gray-200"><i class="fas fa-home"></i> Home</a>
+                <a href="/wallet.html" class="text-white hover:text-gray-200"><i class="fas fa-wallet"></i> Wallet</a>
+                <a href="/transactions.html" class="text-white hover:text-gray-200"><i class="fas fa-exchange-alt"></i> Transactions</a>
+                <a href="/education.html" class="text-white hover:text-gray-200"><i class="fas fa-graduation-cap"></i> Learn</a>
+                <a href="/analytics.html" class="text-white hover:text-gray-200"><i class="fas fa-chart-line"></i> Analytics</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
         </nav>
-        <div id="mobile-menu" class="hidden md:hidden">
-            <a href="/" class="block py-2 px-4 text-sm hover:bg-blue-700">Home</a>
-            <a href="/wallet.html" class="block py-2 px-4 text-sm hover:bg-blue-700">Wallet</a>
-            <a href="/transactions.html" class="block py-2 px-4 text-sm hover:bg-blue-700">Transactions</a>
-            <a href="/education.html" class="block py-2 px-4 text-sm hover:bg-blue-700">Learn</a>
-            <a href="/analytics.html" class="block py-2 px-4 text-sm hover:bg-blue-700">Analytics</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 text-white">
+            <a href="/" class="block py-2 px-4 text-sm hover:bg-blue-700"><i class="fas fa-home"></i> Home</a>
+            <a href="/wallet.html" class="block py-2 px-4 text-sm hover:bg-blue-700"><i class="fas fa-wallet"></i> Wallet</a>
+            <a href="/transactions.html" class="block py-2 px-4 text-sm hover:bg-blue-700"><i class="fas fa-exchange-alt"></i> Transactions</a>
+            <a href="/education.html" class="block py-2 px-4 text-sm hover:bg-blue-700"><i class="fas fa-graduation-cap"></i> Learn</a>
+            <a href="/analytics.html" class="block py-2 px-4 text-sm hover:bg-blue-700"><i class="fas fa-chart-line"></i> Analytics</a>
         </div>
     </header>
+
     <main class="container mx-auto px-6 py-8">
-        <h1 class="text-3xl font-bold mb-6">Welcome to Flash USDT Sender</h1>
-        
-                    <div class="bg-white shadow-md rounded-lg p-6 dark:bg-gray-800">
-                        <p class="mb-4">Explore the world of blockchain technology and USDT transactions through our educational platform. Learn about secure transactions, wallet management, and more!</p>
-                        <div class="flex flex-wrap gap-4">
-                            <a href="/wallet.html" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300">Setup Wallet</a>
-                            <a href="/transactions.html" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition duration-300">Send USDT</a>
-                            <a href="/education.html" class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600 transition duration-300">Learn More</a>
-                        </div>
-                    </div>
-                    <div id="network-info" class="mt-4 p-4 bg-yellow-100 rounded-lg dark:bg-yellow-900"></div>
-                    <div id="blockchain-stats" class="mt-4 p-4 bg-gray-200 rounded-lg dark:bg-gray-700">
-                        <h2 class="text-xl font-bold mb-2">Live Blockchain Stats</h2>
-                        <p id="block-height">Block Height: Loading...</p>
-                        <p id="gas-price">Gas Price: Loading...</p>
-                        <p id="network-congestion">Network Congestion: Loading...</p>
-                    </div>
-                    <div class="mt-4">
-                        <h2 class="text-2xl font-bold mb-4">USDT Price Chart</h2>
-                        <canvas id="usdt-price-chart"></canvas>
-                    </div>
-                
+        <h1 class="text-4xl font-bold text-center mb-6 text-gray-800 dark:text-gray-200">Welcome to Flash USDT Sender</h1>
+        <div class="bg-white shadow-xl rounded-lg p-6 mb-8 dark:bg-gray-800">
+            <p class="mb-4 text-gray-700 dark:text-gray-200">Explore the world of blockchain technology and USDT transactions through our platform. Learn about secure transactions, wallet management, and more!</p>
+            <div class="flex flex-wrap gap-6 justify-center">
+                <a href="/wallet.html" class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition duration-300">
+                    <i class="fas fa-wallet mr-2"></i> Setup Wallet
+                </a>
+                <a href="/transactions.html" class="bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition duration-300">
+                    <i class="fas fa-exchange-alt mr-2"></i> Send USDT
+                </a>
+                <a href="/education.html" class="bg-yellow-500 text-white px-6 py-3 rounded-lg hover:bg-yellow-600 transition duration-300">
+                    <i class="fas fa-graduation-cap mr-2"></i> Learn More
+                </a>
+            </div>
+        </div>
+
+        <div id="network-info" class="mt-8 p-4 bg-yellow-100 rounded-lg dark:bg-yellow-900"></div>
+        <div id="blockchain-stats" class="mt-8 p-6 bg-gray-200 rounded-lg dark:bg-gray-700">
+            <h2 class="text-2xl font-bold mb-2 text-gray-800 dark:text-gray-200">Live Blockchain Stats</h2>
+            <p id="block-height" class="text-lg">Block Height: Loading...</p>
+            <p id="gas-price" class="text-lg">Gas Price: Loading...</p>
+            <p id="network-congestion" class="text-lg">Network Congestion: Loading...</p>
+        </div>
+
+        <div class="mt-8">
+            <h2 class="text-2xl font-bold mb-4 text-gray-800 dark:text-gray-200">USDT Price Chart</h2>
+            <canvas id="usdt-price-chart"></canvas>
+        </div>
     </main>
-    <footer class="bg-gray-800 text-white py-4 dark:bg-gray-950">
-        <div class="container mx-auto px-6 text-center">
+
+    <footer class="bg-gray-800 text-white py-6 dark:bg-gray-950">
+        <div class="container mx-auto text-center">
             <p>&copy; 2024 Flash USDT Sender - Blockchain Education Platform. All rights reserved.</p>
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="https://t.me/ScriptersShop" class="text-white hover:text-gray-400">
+                    <i class="fab fa-telegram"></i> Telegram
+                </a>
+                <a href="https://github.com/your-repository" class="text-white hover:text-gray-400">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </div>
         </div>
     </footer>
+
     <script>
         document.getElementById('mobile-menu-button').addEventListener('click', function() {
             document.getElementById('mobile-menu').classList.toggle('hidden');
         });
     </script>
 </body>
+
 </html>
